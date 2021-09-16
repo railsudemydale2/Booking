@@ -5,6 +5,8 @@ import Home from './booking/Home';
 import Login from './auth/Login';
 import Register from './auth/Register';
 import TopNav from './components/TopNav';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 /**
  * Let's create TopNavigation/mmenu bar so that we can easily TopNavigate between pages
@@ -14,6 +16,17 @@ import TopNav from './components/TopNav';
 function App() {
   return (
     <BrowserRouter>
+    <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <TopNav />
       <Switch>
         <Route exact path="/" component={Home} />
