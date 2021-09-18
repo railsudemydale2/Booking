@@ -11,7 +11,6 @@ const Register = ({ history }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const res = await register({
         name,
@@ -19,11 +18,10 @@ const Register = ({ history }) => {
         password,
       });
       console.log('REGISTER USER ===> ', res);
-      toast.success('Register successful. Please login');
+      toast.success('Register success. Please login.');
       history.push('/login');
     } catch (err) {
-      // console.log('REGISTER USER FAILED ===> ', err);
-      // toast.warning('Registration failed. Please try to register again.');
+      console.log(err);
       if (err.response.status === 400) toast.error(err.response.data);
     }
   };
