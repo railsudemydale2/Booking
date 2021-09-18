@@ -5,8 +5,8 @@ import LoginForm from '../components/LoginForm';
 import { useDispatch } from 'react-redux';
 
 const Login = ({ history }) => {
-  const [email, setEmail] = useState('ryan@gmail.com');
-  const [password, setPassword] = useState('rrrrrr');
+  const [email, setEmail] = useState('stewartdale073@gmail.com');
+  const [password, setPassword] = useState('B3^6#a7C');
 
   const dispatch = useDispatch();
 
